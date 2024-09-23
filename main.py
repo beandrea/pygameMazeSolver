@@ -25,7 +25,7 @@ while running:
                     maze.solve()
 
                 if maze.state == maze.stateList[1]:
-                    screen.fill((0, 0, 0))
+                    # screen.fill((0, 0, 0))
                     maze.break_entrance_and_exit()
 
                     maze.break_walls_r(0, 0)

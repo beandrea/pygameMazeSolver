@@ -39,6 +39,8 @@ class Maze:
         x2 = x1 + self.__cell_size_x
         y2 = y1 + self.__cell_size_y
         self.__cells[i][j].draw(x1, y1, x2, y2)
+        pygame.display.update()
+        pygame.time.wait(20)
 
     def break_entrance_and_exit(self):
         self.__cells[0][0].has_top_wall = False
@@ -89,6 +91,8 @@ class Maze:
                 cell.visited = False
 
     def solve_r(self, i, j):
+        pygame.display.update()
+        pygame.time.wait(20)
         self.__cells[i][j].visited = True
 
         if i == self.__num_cols - 1 and j == self.__num_rows - 1:
