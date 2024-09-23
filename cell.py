@@ -32,12 +32,12 @@ class Cell:
         if self.has_right_wall:
             pygame.draw.line(self.__screen, (255, 255, 255), (self.__x2, self.__y1), (self.__x2, self.__y2))
         else:
-            pygame.draw.line(self.__screen, (0, 0, 0), (self.__x1, self.__y1), (self.__x2, self.__y1))
+            pygame.draw.line(self.__screen, (0, 0, 0), (self.__x1, self.__y1), (self.__x2, self.__y2))
 
         if self.has_bottom_wall:
             pygame.draw.line(self.__screen, (255, 255, 255), (self.__x1, self.__y2), (self.__x2, self.__y2))
         else:
-            pygame.draw.line(self.__screen, (0, 0, 0), (self.__x1, self.__y1), (self.__x2, self.__y1))
+            pygame.draw.line(self.__screen, (0, 0, 0), (self.__x1, self.__y2), (self.__x2, self.__y2))
 
     def draw_move(self, to_cell, undo: bool = False):
         half_length = abs(self.__x2 - self.__x1) // 2
